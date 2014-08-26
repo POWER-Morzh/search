@@ -1,0 +1,45 @@
+# System
+.git
+*.swp
+*~
+*.pyc
+.DS_Store
+
+# Intelij Idea
+.idea
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+RemoteSystemsTempFiles
+.metadata
+.settings
+.cproject
+.project
+.buildpath
+
+# Netbeans
+nbproject
+
+# RStudio
+*.Rproj
+.Rproj.user
+.Rhistory
+
+# Binary files
+bin
+build
+lib
+*.o
+#*.pdf
+
+# Heavy visualisation files
+*.vtk
+
+# forum
+cache/*
+store/*
+
+# Hidden due to licencing or otherwise
+ml_login_data.mat
