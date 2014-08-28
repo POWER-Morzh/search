@@ -37,6 +37,7 @@ class CBController_field {
 		
 		$row = new moscomprofilerFields( $_CB_database );
 		print_r($row);
+		echo "<br /><br />";
 	
 		$paramsEditorHtml			=	null;
 	
