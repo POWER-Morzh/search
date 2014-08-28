@@ -841,7 +841,7 @@ function showField( $option ) {
 	cbimport( 'cb.pagination' );
 	$pageNav = new cbPageNav( $total, $limitstart, $limit );
 	$_CB_database->setQuery( "SELECT f.fieldid, f.title, f.name, f.description, f.type, f.required, f.published, "
-		. "f.profile, f.ordering, f.registration, f.searchable, f.pluginid, f.sys, f.tablecolumns, "
+		. "f.profile, f.ordering, f.registration, f.profile1, f.profile2, f.profile3, f.searchable, f.pluginid, f.sys, f.tablecolumns, "
 		. "t.title AS 'tab', t.enabled AS 'tabenabled', t.pluginid AS 'tabpluginid', "
 		. "p.name AS pluginname, p.published AS pluginpublished, "
 		. "pf.name AS fieldpluginname, pf.published AS fieldpluginpublished "

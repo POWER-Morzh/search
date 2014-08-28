@@ -1153,12 +1153,15 @@ function shDiv(objID,sh) {
       <th width="10%" class="title"><?php echo htmlspecialchars( CBTxt::T('Title') ); ?></th>
       <th width="10%" class="title"><?php echo htmlspecialchars( CBTxt::T('Type') ); ?></th>
       <th width="10%" class="title"><?php echo htmlspecialchars( CBTxt::T('Tab') ); ?></th>
-      <th width="5%" class="title"><?php echo htmlspecialchars( CBTxt::T('Required') ); ?>?</th>
-      <th width="5%" class="title"><?php echo htmlspecialchars( CBTxt::T('Profile') ); ?>?</th>
-      <th width="5%" class="title"><?php echo htmlspecialchars( CBTxt::T('Registration') ); ?>?</th>
-      <th width="5%" class="title"><?php echo htmlspecialchars( CBTxt::T('Searchable') ); ?>?</th>
-      <th width="5%" class="title"><?php echo htmlspecialchars( CBTxt::T('Published') ); ?>?</th>
-      <th width="5%" class="title" colspan="2"><?php echo htmlspecialchars( CBTxt::T('Re-Order') ); ?></th>
+      <th width="4%" class="title"><?php echo htmlspecialchars( CBTxt::T('Required') ); ?>?</th>
+      <th width="4%" class="title"><?php echo htmlspecialchars( CBTxt::T('Profile') ); ?>?</th>
+      <th width="4%" class="title"><?php echo htmlspecialchars( CBTxt::T('Registration') ); ?>?</th>
+      <th width="3%" class="title"><?php echo htmlspecialchars( CBTxt::T('profile1') ); ?>?</th>
+      <th width="3%" class="title"><?php echo htmlspecialchars( CBTxt::T('profile2') ); ?>?</th>
+      <th width="3%" class="title"><?php echo htmlspecialchars( CBTxt::T('profile3') ); ?>?</th>
+      <th width="3%" class="title"><?php echo htmlspecialchars( CBTxt::T('Searchable') ); ?>?</th>
+      <th width="3%" class="title"><?php echo htmlspecialchars( CBTxt::T('Published') ); ?>?</th>
+      <th width="3%" class="title" colspan="2"><?php echo htmlspecialchars( CBTxt::T('Re-Order') ); ?></th>
 	  <th width="1%">
 	  	<?php if ( $canEditState ) { ?>
 	  	<a href="javascript: cbsaveorder( <?php echo count( $rows )-1; ?> )"><img src="../components/com_comprofiler/plugin/templates/luna/images/mini-icons/icon-16-filesave.png" border="0" width="16" height="16" alt="<?php echo htmlspecialchars( CBTxt::T('Save Order') ); ?>" /></a>
@@ -1198,6 +1201,9 @@ function shDiv(objID,sh) {
 			$task3 = $row->published ?  'fieldPublishedNo' : 'fieldPublishedYes';
 			$img4  = $row->registration ?  'tick.png' : 'publish_x.png';
 			$task4 = $row->registration ?  'fieldRegistrationNo' : 'fieldRegistrationYes';
+			$img41 = $row->profile1 ?  'tick.png' : 'publish_x.png';
+			$img42 = $row->profile2 ?  'tick.png' : 'publish_x.png';
+			$img43 = $row->profile3 ?  'tick.png' : 'publish_x.png';
 			$img5  = $row->searchable ?  'tick.png' : 'publish_x.png';
 			$task5 = $row->searchable ?  'fieldSearchableNo' : 'fieldSearchableYes';
 ?>
@@ -1274,7 +1280,7 @@ function shDiv(objID,sh) {
       		}
       		?>
       </td>
-      <td width="10%"><?php 
+      <td width="5%"><?php 
 			if ( $canEditState ) {
 			?>
       	<a href="javascript: void(0);" onClick="return cbListItemTask( this, '<?php echo $task4;?>', null, null, 'cb', '<?php echo $i;?>' )">
@@ -1287,7 +1293,16 @@ function shDiv(objID,sh) {
       		}
       		?>
       </td>
-      <td width="10%"><?php
+      <td width="5%">
+        <img src="<?php echo $imgpath.$img41;?>" width="16" height="16" border="0" alt="" />
+      </td>
+      <td width="5%">
+        <img src="<?php echo $imgpath.$img42;?>" width="16" height="16" border="0" alt="" />
+      </td>
+      <td width="5%">
+        <img src="<?php echo $imgpath.$img43;?>" width="16" height="16" border="0" alt="" />
+      </td>
+      <td width="5%"><?php
       if ( $canEditState && $row->tablecolumns != '' && ! in_array( $row->type, array( 'password', 'userparams' ) ) ) {
 		?>
 		<a href="javascript: void(0);" onClick="return cbListItemTask( this, '<?php echo $task5;?>', null, null, 'cb', '<?php echo $i;?>' )">
@@ -1300,7 +1315,7 @@ function shDiv(objID,sh) {
 		?></td>
 <?php		if ( ( ! $canEditState ) || ( $row->sys == 1 ) ) {
 ?>
-      <td width="10%"><img src="<?php echo $imgpath.$img3;?>" width="16" height="16" border="0" alt="" title="<?php if ( $canEdit ) { echo htmlspecialchars( CBTxt::T('System-fields cannot be published/unpublished here.') ); if ( in_array( $row->name, array( 'name', 'firstname', 'middlename', 'lastname' ) ) ) echo ' ' . htmlspecialchars( CBTxt::T('Name-fields publishing depends on your setting in global CB config.') ); } ?>" /></td>
+      <td width="5%"><img src="<?php echo $imgpath.$img3;?>" width="16" height="16" border="0" alt="" title="<?php if ( $canEdit ) { echo htmlspecialchars( CBTxt::T('System-fields cannot be published/unpublished here.') ); if ( in_array( $row->name, array( 'name', 'firstname', 'middlename', 'lastname' ) ) ) echo ' ' . htmlspecialchars( CBTxt::T('Name-fields publishing depends on your setting in global CB config.') ); } ?>" /></td>
 <?php
 			} else {
 ?>
