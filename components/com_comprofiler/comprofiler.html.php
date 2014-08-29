@@ -1380,6 +1380,7 @@ $('#cbcheckedadminForm').submit( cbFrmSubmitButton );
 		<input type="hidden" name="emailpass" value="' .$emailpass . '" />
 		<input type="hidden" name="option" value="' . $option . '" />
 		<input type="hidden" name="task" value="saveregisters" />
+		<input type="hidden" name="cb_usercbtype" value="' . $_POST['user_cb_type'] . '" />
 		' . cbGetSpoofInputTag( null, $cbSpoofString ) . '
 		' . cbGetRegAntiSpamInputTag( $regAntiSpamValues ) . "\n"
 		;
