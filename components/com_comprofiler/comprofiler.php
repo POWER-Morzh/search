@@ -124,6 +124,11 @@ switch( $task ) {
 	sendNewPass( $option );
 	break;
 
+	case "startRegisters":
+	case "startregisters":
+	startRegisterForm();
+	break;
+		
 	case "registers":
 	registerForm( $option, isset( $ueConfig['emailpass'] ) ? $ueConfig['emailpass'] : '0' );
 	break;
@@ -918,6 +923,22 @@ function sendNewPass( $option ) {
 	} else {
 		cbRedirect( cbSef("index.php?option=$option&amp;task=done".($Itemid ? "&amp;Itemid=". (int) $Itemid : ""), false ), _UE_NEWPASS_FAILED );
 	}
+}
+
+function startRegisterForm() {
+	global $_CB_framework, $_CB_database, $ueConfig, $_PLUGINS, $_POST;
+	$urlRegister			=	$_CB_framework->viewUrl( 'registers' );
+	?>
+<form action="<?php echo $urlRegister;?>" method="post" id="login-form" class="cbLoginForm" style="margin:0px;">
+<select name="user_cb_type" id="user_cb_type"  class="required inputbox" title="Profile:To distinguish Privat oder Agentur acounts.">
+	<option value="1" id="cbPrivat">Privat</option>
+	<option value="2" id="cbEnsemble">Ensemble</option>
+	<option value="3" id="cbAgentur">Agentur</option>
+</select>
+
+<input type="submit" value="Weiter" class="button" />
+</form>
+<?php 
 }
 
 function registerForm( $option, $emailpass, $regErrorMSG = null ) {

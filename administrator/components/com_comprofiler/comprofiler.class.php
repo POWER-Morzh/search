@@ -3803,7 +3803,7 @@ class cbTabs extends cbTabHandler {
 	function _getTabFieldsDb( $tabid, &$user, $reason, $fieldIdOrName = null, $prefetchFields = true, $fullAccess = false ) {
 		static $prefetched		=	array();
 		static $fieldsByName	=	null;
-
+		
 		$preIdx					=	$fullAccess ? 'full' : $reason;
 
 		if ( ( ! $prefetchFields ) || ! isset( $prefetched[$preIdx] ) ) {
@@ -3834,6 +3834,8 @@ class cbTabs extends cbTabHandler {
 						$where[]	=	"( f.profile != 0 OR f.name = 'username'" . ( in_array( $ueConfig['name_format'], array( 1, 2, 4 ) ) ? " OR f.name = 'name'" : '' ) . ')';
 						break;
 					case 'register':
+						$user_cb_type = $_POST['user_cb_type'];
+						$where[]	=	'f.profile' . $user_cb_type . ' = 1';
 						$where[]	=	'f.registration = 1';
 						break;
 					case 'adminfulllist':

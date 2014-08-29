@@ -618,7 +618,7 @@ if ( $_CB_framework->myId() ) {
 		}
 	}
 	if ($registration_enabled && $show_newaccount) {
-		$urlRegister			=	$_CB_framework->viewUrl( 'registers' );
+		$urlRegister			=	$_CB_framework->viewUrl( 'startregisters' );
 		if ( $https_post /* && ! $isHttps */ ) {
 			if ( ( substr($urlRegister, 0, 5) != "http:" ) && ( substr($urlRegister, 0, 6) != "https:" ) ) {
 				$urlRegister = $cblogin_live_site."/".$urlRegister;
