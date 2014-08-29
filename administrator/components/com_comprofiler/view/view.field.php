@@ -276,6 +276,21 @@ ob_end_clean();
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
+			<td width="20%"><?php echo CBTxt::T('profile1'); ?>?:</td>
+			<td width="20%"><?php echo $lists['profile1']; ?></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="20%"><?php echo CBTxt::T('profile2'); ?>?:</td>
+			<td width="20%"><?php echo $lists['profile2']; ?></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="20%"><?php echo CBTxt::T('profile3'); ?>?:</td>
+			<td width="20%"><?php echo $lists['profile3']; ?></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
 			<td width="20%"><?php echo CBTxt::T('Published'); ?>:</td>
 			<td width="20%"><?php echo ( $row->sys == 1 ? ( $row->published ? _UE_YES : _UE_NO ) . ' (' . CBTxt::T('System-fields cannot be published/unpublished here.') . ( in_array( $row->name, array( 'name', 'firstname', 'middlename', 'lastname' ) ) ? ' ' . CBTxt::T('Name-fields publishing depends on your setting in global CB config.') . ')' : ')' ) : $lists['published'] ); ?></td>
 			<td>&nbsp;</td>

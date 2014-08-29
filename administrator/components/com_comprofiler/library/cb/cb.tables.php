@@ -158,9 +158,9 @@ class moscomprofilerFields extends comprofilerDBTable {
    var $default			= null;
    var $published		= null;
    var $registration	= null;
-   var $profile1			= null;
-   var $profile2			= null;
-   var $profile3			= null;
+   var $profile1		= null;
+   var $profile2		= null;
+   var $profile3		= null;
    var $profile			= null;
    var $displaytitle	= null;
    var $readonly		= null;

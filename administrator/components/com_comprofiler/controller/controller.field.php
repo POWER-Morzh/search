@@ -36,8 +36,6 @@ class CBController_field {
 		$canEditState			=	CBuser::getMyInstance()->authoriseAction( 'core.edit.state' );
 		
 		$row = new moscomprofilerFields( $_CB_database );
-		print_r($row);
-		echo "<br /><br />";
 	
 		$paramsEditorHtml			=	null;
 	
@@ -189,11 +187,9 @@ class CBController_field {
 	
 		$lists['registration'] = moscomprofilerHTML::yesnoSelectList( 'registration', 'class="inputbox" size="1"' . ( $canEditState ? '' : ' disabled="disabled"' ), $row->registration );
 		
-		$lists['profile1'] = moscomprofilerHTML::yesnoSelectList( 'registration', 'class="inputbox" size="1"' . ( $canEditState ? '' : ' disabled="disabled"' ), $row->profile1 );
-		$lists['profile2'] = moscomprofilerHTML::yesnoSelectList( 'registration', 'class="inputbox" size="1"' . ( $canEditState ? '' : ' disabled="disabled"' ), $row->profile2 );
-		$lists['profile2'] = moscomprofilerHTML::yesnoSelectList( 'registration', 'class="inputbox" size="1"' . ( $canEditState ? '' : ' disabled="disabled"' ), $row->profile3 );
-		echo "<br />";
-		print_r($row);
+		$lists['profile1'] = moscomprofilerHTML::yesnoSelectList( 'profile1', 'class="inputbox" size="1"' . ( $canEditState ? '' : ' disabled="disabled"' ), $row->profile1 );
+		$lists['profile2'] = moscomprofilerHTML::yesnoSelectList( 'profile2', 'class="inputbox" size="1"' . ( $canEditState ? '' : ' disabled="disabled"' ), $row->profile2 );
+		$lists['profile3'] = moscomprofilerHTML::yesnoSelectList( 'profile3', 'class="inputbox" size="1"' . ( $canEditState ? '' : ' disabled="disabled"' ), $row->profile3 );
 	
 		$pluginView					=	_CBloadView( 'field' );
 		$pluginView->editfield( $row, $lists, $fvalues, $option, $paramsEditorHtml );
@@ -250,6 +246,7 @@ class CBController_field {
 		$this->_importNeededSave();
 
 		$fieldOldTab		=	new moscomprofilerTabs( $_CB_database );
+		
 		if ( isset( $_POST['oldtabid'] ) && $_POST['oldtabid'] ) {
 			$fieldOldTab->load( (int) $_POST['oldtabid'] );
 			// Check if user is a super user:
