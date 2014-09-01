@@ -3836,8 +3836,10 @@ class cbTabs extends cbTabHandler {
 					case 'register':
 						if($user_cb_type = $_POST['user_cb_type']) {
 							$where[]	=	'f.profile' . $user_cb_type . ' = 1';
+							$where[]	=	'f.registration = 1';
+						} else {
+							$where[]	=	'f.registration = 1 OR f.profile1 =1 OR f.profile2 = 1 OR f.profile3 = 1';
 						}
-						$where[]	=	'f.registration = 1';
 						break;
 					case 'adminfulllist':
 					default:
