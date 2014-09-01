@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" version="2.4.0" method="install">
+	<name>Community Builder advanced search</name>
+	<author>Dan-Marius Sabau</author>
+	<creationDate>December 2013</creationDate>
+	<authorEmail>contact@dan-marius.ro</authorEmail>
+	<authorUrl>http://www.cbadvancedsearch.com</authorUrl>
+	<copyright>Some Rights Reserved, Please Contact for More Information</copyright>
+	<license>Licensed Under GPL</license>
+	<version>2.4.0</version>
+	<description>CB Advanced Search is a search component for Community Builder that can be customise to search any number of fields and you can also define the layout of the front end search results.</description>
+ 	<packagename>cbadvsearch</packagename>
+	<files folder="packages">
+		<file type="component" id="com_cbadvsearch">com_cbadvsearch_2_4_0.zip</file>
+		<file type="module" id="standard" group="cbadvsearch_module">mod_cbadvsearch_1_4.zip</file>
+		<file type="module" id="standard" group="cbadvsearch_module">mod_cbadvsearch_saved_lists_1_0.zip</file>
+		<file type="module" id="standard" group="cbadvsearch_module">mod_cbadvsearch_search_1_0.zip</file>
+		<file type="module" id="standard" group="cbadvsearch_module">mod_cbadvsearch_results_1_0.zip</file>
+	</files>
+</extension>

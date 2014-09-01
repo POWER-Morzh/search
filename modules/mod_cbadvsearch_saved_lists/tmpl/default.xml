@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: default.xml 8178 2013-11-23 05:39:47Z dan-marius $ -->
+<metadata>
+	<layout title="CB Advanced Search Saved Lists Frontend">
+		<message>
+			<![CDATA[STANDARD CONTACT LAYOUT DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>CB Advanced Search Saved Lists</name>
+	</state>	
+</metadata>

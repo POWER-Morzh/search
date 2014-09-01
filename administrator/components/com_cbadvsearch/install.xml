@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0">
+	<name>cbadvsearch</name>
+	<!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>2011-05-28</creationDate>
+	<author>Dan-Marius Sabau</author>
+	<authorEmail>contact@dan-marius.ro</authorEmail>
+	<authorUrl>http://www.cbadvancedsearch.com</authorUrl>
+	<copyright>Some Rights Reserved, Please Contact for More Information</copyright>
+	<license>Licensed Under GPL</license>
+	<!--  The version string is recorded in the components table -->
+	<version>2.4</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>CB Advanced Search is a search component for Community Builder that can be customise to search any number of fields and you can also define the layout of the front end search results.</description>
+
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>cbpaging.php</filename>
+		<filename>cbadvsearch.php</filename>
+		<filename>index.html</filename>
+		<filename>language_en.php</filename>
+		
+		<filename>images/config.png</filename>
+		<filename>images/translator.jpg</filename>
+		<filename>images/manager.png</filename>
+		
+		<filename>models/cbadvsearch.php</filename>
+		
+		<filename>views/cbadvsearch/index.html</filename>
+		<filename>views/cbadvsearch/view.html.php</filename>
+		<filename>views/cbadvsearch/tmpl/index.html</filename>
+		<filename>views/cbadvsearch/tmpl/default.php</filename>
+		<filename>views/cbadvsearch/tmpl/default.xml</filename>
+		<filename>views/index.html</filename>
+	</files>
+
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">mysql-install.sql</file>
+			<file charset="utf8" driver="postgresql">postgresql-install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">mysql-uninstall.sql</file>
+			<file charset="utf8" driver="postgresql">postgresql-uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu>CB Adv. Search</menu>
+		
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+	
+		<files folder="admin">
+			<filename>cbadvsearch.php</filename>
+			<filename>index.html</filename>
+			<filename>mysql-install.sql</filename>
+			<filename>postgresql-install.sql</filename>
+			<filename>mysql-uninstall.sql</filename>
+			<filename>postgresql-uninstall.sql</filename>
+			<filename>controller.php</filename>
+			<filename>css/cbadvsearch.css</filename>
+
+			<filename>controllers/cbadvsearch.php</filename>
+			<filename>controllers/cbadvsearchconfig.php</filename>
+			<filename>controllers/index.html</filename>
+			
+			<filename>models/cbadvsearch.php</filename>
+			<filename>models/cbadvsearchconfig.php</filename>
+			<filename>models/cbadvsearchconfigs.php</filename>
+			<filename>models/cbadvsearchs.php</filename>
+			<filename>models/cbadvsearchsdesc.php</filename>
+			<filename>models/index.html</filename>
+			
+			<filename>tables/cbadvsearch.php</filename>
+			<filename>tables/cbadvsearchconfig.php</filename>
+			<filename>tables/cbadvsearchsdesc.php</filename>
+			<filename>tables/index.html</filename>
+			
+			<filename>views/cbadvsearch/view.html.php</filename>
+			<filename>views/cbadvsearch/tmpl/form.php</filename>
+			<filename>views/cbadvsearch/index.html</filename>
+			<filename>views/cbadvsearch/tmpl/index.html</filename>
+			
+			<filename>views/cbadvsearchconfig/view.html.php</filename>
+			<filename>views/cbadvsearchconfig/index.html</filename>
+			<filename>views/cbadvsearchconfig/tmpl/form.php</filename>
+			<filename>views/cbadvsearchconfig/tmpl/index.html</filename>
+			
+			<filename>views/cbadvsearchconfigs/view.html.php</filename>
+			<filename>views/cbadvsearchconfigs/index.html</filename>
+			<filename>views/cbadvsearchconfigs/tmpl/default.php</filename>
+			<filename>views/cbadvsearchconfigs/tmpl/index.html</filename>
+			
+			<filename>views/cbadvsearchs/view.html.php</filename>
+			<filename>views/cbadvsearchs/index.html</filename>
+			<filename>views/cbadvsearchs/tmpl/default.php</filename>
+			<filename>views/cbadvsearchs/tmpl/index.html</filename>
+			
+			<filename>views/cbadvsearchsdesc/view.html.php</filename>
+			<filename>views/cbadvsearchsdesc/tmpl/form.php</filename>
+			<filename>views/cbadvsearchsdesc/index.html</filename>
+			<filename>views/cbadvsearchsdesc/tmpl/index.html</filename>
+			
+			<filename>help/index.html</filename>
+			<filename>help/en-GB/index.html</filename>
+			<filename>help/en-GB/en-help.html</filename>
+			<filename>help/en-GB/CBAdvSearch_Help_V2_4.pdf</filename>
+		</files>		
+	</administration>
+</extension>

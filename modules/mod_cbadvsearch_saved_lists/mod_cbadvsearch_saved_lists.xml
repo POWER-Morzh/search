@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<extension type="module" version="1.5" method="install">
+	<name>CB Advanced Search Saved Lists</name> 
+	<creationDate>2011-05-31</creationDate>
+	<author>Dan-Marius Sabau</author>
+	<authorEmail>contact@dan-marius.ro</authorEmail>
+	<authorUrl>http://www.cbadvancedsearch.com</authorUrl>
+	<copyright>(C) 2011 CBadvsearch.com. This module is released under the GNU/GPL v2 License</copyright>
+	<version>1.0</version>
+	<description>Display the saved list for Community Builder user, part of CB advanced search.</description> 
+	<files>
+		<filename module="mod_cbadvsearch_saved_lists">mod_cbadvsearch_saved_lists.php</filename> 
+		<filename>cbadvsearch_saved_lists.php</filename> 
+		<filename>index.html</filename> 
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_cbadvsearch_saved_lists.ini</language>
+		<language tag="en-GB">en-GB.mod_cbadvsearch_saved_lists.sys.ini</language>
+	</languages>
+
+	<params>
+		<param	name="showSavedFormsList"		type="list"	default="1"
+				label="MOD_CBADVSEARCH_SAVED_LISTS_SHOW_SAVED_FORMS_LIST_LABEL"	description="MOD_CBADVSEARCH_SAVED_LISTS_SHOW_SAVED_FORMS_LIST_DESC">
+			<option value="0">no</option>
+			<option value="1">yes</option>
+		</param>
+		<param	name="showIgnoredResultsList"		type="list"	default="1"
+				label="MOD_CBADVSEARCH_SAVED_LISTS_SHOW_IGNORED_RESULTS_LIST_LABEL"	description="MOD_CBADVSEARCH_SAVED_LISTS_SHOW_IGNORED_RESULTS_LIST_DESC">
+			<option value="0">no</option>
+			<option value="1">yes</option>
+		</param>
+		<param	name="showSavedResultsList"		type="list"	default="1"
+				label="MOD_CBADVSEARCH_SAVED_LISTS_SHOW_SAVED_RESULTS_LIST_LABEL"	description="MOD_CBADVSEARCH_SAVED_LISTS_SHOW_SAVED_RESULTS_LIST_DESC">
+			<option value="0">no</option>
+			<option value="1">yes</option>
+		</param>
+	</params>
+
+	<!-- J1.6 of course doesn't understand the above so let it repeat once more: -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field	name="showSavedFormsList"		type="list"	default="1"
+						label="MOD_CBADVSEARCH_SAVED_LISTS_SHOW_SAVED_FORMS_LIST_LABEL"	description="MOD_CBADVSEARCH_SAVED_LISTS_SHOW_SAVED_FORMS_LIST_DESC">
+					<option value="0">no</option>
+					<option value="1">yes</option>
+				</field>
+				<field	name="showIgnoredResultsList"		type="list"	default="1"
+						label="MOD_CBADVSEARCH_SAVED_LISTS_SHOW_IGNORED_RESULTS_LIST_LABEL"	description="MOD_CBADVSEARCH_SAVED_LISTS_SHOW_IGNORED_RESULTS_LIST_DESC">
+					<option value="0">no</option>
+					<option value="1">yes</option>
+				</field>
+				<field	name="showSavedResultsList"		type="list"	default="1"
+						label="MOD_CBADVSEARCH_SAVED_LISTS_SHOW_SAVED_RESULTS_LIST_LABEL"	description="MOD_CBADVSEARCH_SAVED_LISTS_SHOW_SAVED_RESULTS_LIST_DESC">
+					<option value="0">no</option>
+					<option value="1">yes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
