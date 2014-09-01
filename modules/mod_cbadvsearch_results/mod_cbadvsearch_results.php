@@ -17,5 +17,6 @@ $cbadvsearch = new modCbadvsearchModelCbadvsearchResults();
 $number = $params->get('searchNumber');	if (empty($number)) $number = 1;
 $results = $cbadvsearch->getTheSearch($number);
 
+
 require JModuleHelper::getLayoutPath('mod_cbadvsearch_results', $params->get('layout', 'default'));
 ?>

@@ -196,7 +196,7 @@ class modCbadvsearchModelCbadvsearchResults
 		return $Obj;
 	}	
 	
-	public function getSearch($conditions = '', $tables = '', $order_by = '', $limitstart = 0, $limit = 25, $user_groups = "", $contorx = 0)
+	public function getSearch($conditions = '', $tables = '', $order_by = '', $limitstart = 0, $limit = 25, $user_groups = "", $contorx = 0, $profile_type = 1)
 	{
 		global $mainframe;
 		$db =& JFactory::getDBO();
@@ -232,7 +232,7 @@ class modCbadvsearchModelCbadvsearchResults
 					else $conditions .= " or a".$count.".group_id='".$user_groups."'";
 				$conditions .= ")";
 			}
-		if (!empty($conditions)) $query .= " where ".$conditions;
+		if (!empty($conditions)) $query .= " where a.cb_usercbtype = $profile_type and ".$conditions;
 		if (!empty($order_by)) $query .= " order by ".$order_by;
 		if ($limit>0) $query .= " limit ".$limitstart.", ".$limit;
 		$query = str_replace("or ()", "", str_replace("and ()", "", 
@@ -717,14 +717,14 @@ class modCbadvsearchModelCbadvsearchResults
 				{
 					$searchTotalResult = $this->getSearch($conditions, $tables, "", 0, 0, $user_groups, 1);
 					$number_items2 = $number_items==-1 ? $searchTotalResult[0]->contor : $number_items;
-					$searchResult = $this->getSearch($conditions, $tables, $order_by, ($current_page-1)*$number_items2, $number_items2, $user_groups, 0);
+					$searchResult = $this->getSearch($conditions, $tables, $order_by, ($current_page-1)*$number_items2, $number_items2, $user_groups, 0, $search);
 					$total = ceil($searchTotalResult[0]->contor/$number_items2);
 					$searchPagination1 = $this->page_list($current_page, $total, $number_items, 1);
 					$searchPagination2 = $this->page_list($current_page, $total, $number_items, 2);
 				}
 			}
 		}
-		
+
 		//get the cbadvsearch
 		$object = array();
 		$object[] = array("searchword" => $searchword);
