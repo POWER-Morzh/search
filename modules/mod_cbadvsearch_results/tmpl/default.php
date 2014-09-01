@@ -251,7 +251,7 @@ function ignore_selected_users_module()
 					<b><?php echo JText::_($configuration->check_all);?></b>
 			</td>
 		</tr>
-		<?	}
+		<?php	}
 		if (!empty($CBuser->id)) { ?>
 		<tr>
 			<td nowrap="nowrap">
@@ -371,7 +371,7 @@ if ($search_type=="module" && !empty($search_by_fields_or_cblists))
 		</tr>
 	</table><input type="checkbox" name="cbuserlistaModule" id="cbuserlistaModule" value="0" style="display: none;">
 			
-		<?	}	?>
+		<?php	}	?>
 	<div style="margin: 10px; position: relative; float: left; clear: both; width: 100%; border-bottom: 1px solid #000;">
 	<?php	
 	
