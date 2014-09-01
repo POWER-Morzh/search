@@ -246,7 +246,7 @@ class JTableUser extends JTable
 		{
 			$this->setError(JText::_('JLIB_DATABASE_ERROR_EMAIL_INUSE'));
 
-			return false;
+			return true;
 		}
 
 		// Check for root_user != username
