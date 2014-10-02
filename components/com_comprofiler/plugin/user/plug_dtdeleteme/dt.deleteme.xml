@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbinstall version="1.0.0" type="plugin" group="user" method="upgrade">
+	<name>DT Delete Me</name>
+	<author>DTH Development</author>
+	<creationDate>Mar. 28, 2014</creationDate>
+	<copyright>(C)2009 DTH Development</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+	<authorEmail>dthdev@dthdevelopment.com</authorEmail>
+	<authorUrl>www.dthdevelopment.com</authorUrl>
+	<version>1.3</version>
+	<description>This plugin gives the user the ability to delete their own user account through Community Builder 1.7+ in Joomla 1.5/2.5/3.x.</description>
+	
+	<files>
+		<filename plugin="dt.deleteme">dt.deleteme.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<params>	
+		<param name="user_email_sub" label="User Email Subject" type="text" size="40" default="Account Deletion Confirmation" description="Email subject which will be sent to the user after they delete their account." />
+		<param name="user_email_text" label="User Email Text" cols="50" rows="5" type="textarea" default="Your account has been successfully deleted." description="Email text which will be sent to the user after they delete their account." />
+		<param name="text_for_frontend" label="Text for Frontend" cols="50" rows="5" type="textarea" default="By clicking this Delete button, you will completely remove your user account from this site. If you are sure you want to do this, click the button below." description="Text which will show above the Delete Me button in the user profile." />
+		<param name="confirm_msg" label="Pop-Up Confirmation Message" cols="50" rows="3" type="textarea" default="Are you sure you want to delete your account? Clicking OK will immediately log you out and delete your user account." description="This is the text of a confirmation popup message that a user will see when attempting to delete their account." />
+	</params>	
+	<tabs>
+		<tab name="Delete Me" description="" class="getDemoTab" cbfields="0" position="cb_tabmain" displaytype="tab">
+			<params>
+			</params>
+			<fields>
+			</fields>
+		</tab>
+	</tabs>   
+	<install>
+		<queries>
+		</queries>
+	</install>
+	<uninstall>
+		<queries>
+		</queries>
+	</uninstall>
+	<database>
+	</database>
+</cbinstall>
