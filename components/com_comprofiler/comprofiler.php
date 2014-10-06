@@ -933,7 +933,6 @@ function startRegisterForm() {
 <select name="user_cb_type" id="user_cb_type"  class="required inputbox" title="Profile:To distinguish Privat oder Agentur acounts.">
 	<option value="1" id="cbPrivat">Privat</option>
 	<option value="2" id="cbEnsemble">Ensemble</option>
-	<option value="3" id="cbAgentur">Agentur</option>
 </select>
 
 <input type="submit" value="Weiter" class="button" />
