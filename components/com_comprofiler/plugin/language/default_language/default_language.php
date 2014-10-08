@@ -235,6 +235,8 @@ DEFINE('_UE_NO_DATA','Not Supplied');
 DEFINE('_UE_CLICKTOVIEW','Click for');
 DEFINE('_UE_CLICKTOSORTBY','Click to sort by %s');		// %s replaced by sorting name
 DEFINE('_UE_UL_USERNAME_NAME','Username(Name)');
+DEFINE('_UE_INSTRUMENT','Instrument');
+DEFINE('_UE_SOME_INSTRUMENT','Some');
 
 //mod_userextraslogin
 DEFINE('_UE_NO_ACCOUNT','No account yet?');

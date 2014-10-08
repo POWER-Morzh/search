@@ -3801,6 +3801,7 @@ class cbTabs extends cbTabHandler {
 		return $tabsCache;
 	}
 	function _getTabFieldsDb( $tabid, &$user, $reason, $fieldIdOrName = null, $prefetchFields = true, $fullAccess = false ) {
+		global $_CB_framework;
 		static $prefetched		=	array();
 		static $fieldsByName	=	null;
 		
@@ -3834,8 +3835,12 @@ class cbTabs extends cbTabHandler {
 						$where[]	=	"( f.profile != 0 OR f.name = 'username'" . ( in_array( $ueConfig['name_format'], array( 1, 2, 4 ) ) ? " OR f.name = 'name'" : '' ) . ')';
 						break;
 					case 'register':
-						if($user_cb_type = $_POST['user_cb_type']) {
+						if($user_cb_type = $_CB_framework->getRequestVar('user_cb_type')) {
 							$where[]	=	'f.profile' . $user_cb_type . ' = 1';
+							$where[]	=	'f.registration = 1';
+						} else if($cb_usercbtype = $_CB_framework->getRequestVar( 'cb_usercbtype' )) {
+							// Here should be chosen only the things which have to be saved(if you will try to take more, then it will say that some fields are required)
+							$where[]	=	'f.profile' . $cb_usercbtype . ' = 1';
 							$where[]	=	'f.registration = 1';
 						} else {
 							$where[]	=	'f.registration = 1 OR f.profile1 =1 OR f.profile2 = 1 OR f.profile3 = 1';
