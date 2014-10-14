@@ -362,14 +362,17 @@ class modCbadvsearchModelCbadvsearchSearch
 	
 	function getTheSearch($search = 1, $searchURL = "")
 	{
-		$configuration = $this->getConfigurationTranslation();
+// 		$configuration = $this->getConfigurationTranslation();
 		$user =& JFactory::getUser();
 					
 		$lang = JRequest::getString('lang', '', 'post');
 		if (empty($lang)) $lang = JRequest::getString('lang', '', 'get');
 		if (empty($lang) || $lang=="en") $lang = "en-GB";
 		
-		include('components/com_cbadvsearch/language_en.php' );
+		if($lang == "de")
+			include('components/com_cbadvsearch/language_de.php' );
+		else
+			include('components/com_cbadvsearch/language_en.php' );
 		if (!empty($configuration))
 			foreach($configuration as $cf)
 				{
@@ -496,7 +499,7 @@ class modCbadvsearchModelCbadvsearchSearch
 								}
 						}
 						if ($selected==false) $select .= strpos(" ".$field_v, "'") ? '<option value="'.$field_v.'">'.$field_v.'</option>' 
-										: "<option value='".$field_v."'>".$field_v."</option>";
+										: "<option value='".$field_v."'>".JText::_($field_v)."</option>";
 				}
 				$select .= "</select>";		$searchFields[] = $select;
 			}

@@ -297,7 +297,7 @@ function ignore_selected_users_module()
 							$contentx = str_replace("|*|",", ",substr($searchResult[$i]->$field, 0, 100));
 							if (($list_hidden=="no" && !empty($contentx)) || $list_hidden=="yes") {	?>
 							<div class="<?php echo $css_class[$j]; ?>" style="padding:4px 0px; clear: left; width: 100%; clear: both;"><span style="font-weight:bold;"><?php echo $fieldLabels[$j]; ?> : </span>
-							<?php echo (strpos($contentx, "@")>0 && strpos($contentx, ".")>0) ? "<a href='mailto: ".$contentx."'>".$contentx."</a>" : $contentx; ?></div>
+							<?php echo (strpos($contentx, "@")>0 && strpos($contentx, ".")>0) ? "<a href='mailto: ".$contentx."'>".$contentx."</a>" : JText::_($contentx); ?></div>
 				<?php 	}	}	?>
 							<div class="view-details" style="width: 100%; clear: both;"><a href='index.php?option=com_comprofiler&task=userProfile&user=<?php echo $uId.'&Itemid='.$Itemid; ?>'><?php echo $configuration->view_details; ?></a></div>
 					<?php	}

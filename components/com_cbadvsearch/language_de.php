@@ -80,7 +80,7 @@ $language_cbadvsearch = array(
 	"the_search_number" => "The search number", 
 	"the_number_of_searches" => "The number of searches", 
 	"the_description_of_the_search" => "The description of the search", 
-	"description" => "Description", 
+	"description" => "Beschreibung", 
 	"searchable" => "Searchable", 
 	"searchable_it_will_be_used_to_search" => "Searchable (it will be used to search)", 
 	"publish_on_search_form" => "Publish on Search Form", 
@@ -103,7 +103,7 @@ $language_cbadvsearch = array(
 	"descendent" => "descendent", 
 	"view_details" => "View Details",
 	"search_keyword" => "Search keyword", 
-	"search" => "search", 
+	"search" => "Suche", 
 	"select_a_language" => "Select a language", 
 	"the_language" => "The language", 
 	"language_translation" => "Language translation", 
@@ -130,7 +130,7 @@ $language_cbadvsearch = array(
 	"thursday" => "Thursday",
 	"friday" => "Friday",
 	"saturday" => "Saturday",
-	"sunday" => "Sunday",
-	"_UE_SOME_INSTRUMENT" => "Some"
+	"sunday" => "Sunday"
 );
+DEFINE('_UE_SOME_INSTRUMENT','Some');
 ?>
