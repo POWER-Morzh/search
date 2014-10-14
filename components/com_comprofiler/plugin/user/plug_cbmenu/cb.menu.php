@@ -990,9 +990,9 @@ class getMenuTab  extends cbTabHandler {
 
 		// $this->menuBar->set("class", "mainlevel");		//BB: hardcoded to check >RC2.
 
-		$firstMenuName		= $params->get('firstMenuName', '_UE_MENU_CB');
-		$firstSubMenuName	= $params->get('firstSubMenuName', '_UE_MENU_ABOUT_CB');
-		$firstSubMenuHref	= $params->get('firstSubMenuHref', $ue_credits_url);
+// 		$firstMenuName		= $params->get('firstMenuName', '_UE_MENU_CB');
+// 		$firstSubMenuName	= $params->get('firstSubMenuName', '_UE_MENU_ABOUT_CB');
+// 		$firstSubMenuHref	= $params->get('firstSubMenuHref', $ue_credits_url);
 		$secondSubMenuName	= $params->get('secondSubMenuName', '');
 		$secondSubMenuHref	= $params->get('secondSubMenuHref', '');
 		if ($firstMenuName != "") {
