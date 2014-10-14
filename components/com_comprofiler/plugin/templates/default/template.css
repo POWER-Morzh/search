@@ -1,6 +1,12 @@
 /* Community Builder 1.2 template file */
 /* Name: Default */
 
+/* cbFields to hide in profile edit */
+
+#cbfr_56 {
+	display: none;
+}
+
 /* cbFields: For registration and user profile titles and fields: */
 /* cbStatusList: For User Profile Status List Display */
 .cbFields, .cbStatusList {

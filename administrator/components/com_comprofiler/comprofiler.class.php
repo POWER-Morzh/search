@@ -3841,10 +3841,13 @@ class cbTabs extends cbTabHandler {
 						} else if($cb_usercbtype = $_CB_framework->getRequestVar( 'cb_usercbtype' )) {
 							// Here should be chosen only the things which have to be saved(if you will try to take more, then it will say that some fields are required)
 							$where[]	=	'f.profile' . $cb_usercbtype . ' = 1';
-							$where[]	=	'f.registration = 1';
 						} else {
 							$where[]	=	'f.registration = 1 OR f.profile1 =1 OR f.profile2 = 1 OR f.profile3 = 1';
 						}
+						break;
+					case 'edit':
+						$cb_usercbtype = $user->cb_usercbtype;
+						$where[]	=	'f.profile' . $cb_usercbtype . ' = 1';
 						break;
 					case 'adminfulllist':
 					default:
