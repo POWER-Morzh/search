@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cbinstall version="1.8" type="plugin" group="user">
+	<name>CBreCaptcha</name>
+	<author>Juan Padial</author>
+	<creationDate>2012-11-28</creationDate>
+	<copyright>(C) http://www.shikle.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html GNU/GPL</license>
+	<authorUrl>www.shikle.com/cbrecaptcha.htm</authorUrl>
+	<version>1.2.2</version>
+	<description>Provides Captcha spam protection for CB registration and password/username remind process.</description>
+	<files>
+		<filename plugin="cbrecaptcha">cbrecaptcha.php</filename>
+		<filename>captcha_pi/captcha_pi.php</filename>
+		<filename>captcha_pi/index.html</filename>
+		<filename>captcha_pi/license.txt</filename>
+		<filename>captcha_pi/textb.ttf</filename>
+		<filename>recaptcha/recaptchalib.php</filename>
+		<filename>recaptcha/index.html</filename>
+         	<filename>index.html</filename>
+		<filename>cb_mycaptacha.model.php</filename>
+	</files>
+    <params>
+    	<param name="@spacer" type="spacer" default="This plugin was created by Shikle (http://www.shikle.com/cbrecaptcha.htm)" label="Credits:" description="" />
+	<param name="@spacer" type="spacer" default="This plugin is distributed under a limited GNU/GPLv3 license" label="License:" description="" />
+        <param name="@spacer" type="spacer" default="" label=" " description="" />
+        <param name="captchatype" type="list" default="myCaptcha" label="Captcha type" description="Select the type of Captcha widget: reCaptcha from google or myCaptcha (generated on your server).">
+			<option value="reCaptcha">reCaptcha</option>
+			<option value="myCaptcha">myCaptcha</option>                                
+	</param>
+        <param name="@spacer" type="spacer" default="reCaptcha Params" label=" " description="" />
+		<param name="publickey" type="text" size="25" default="" label="reCaptcha public key" description="Enter your reCaptcha public key. If you don't have one go to http://www.google.com/recaptcha" />
+		<param name="privatekey" type="text" size="25" default="" label="reCaptcha private key" description="Enter your reCaptcha private key. If you don't have one go to http://www.google.com/recaptcha" />
+		<param name="recaptchalanguage" type="text" size="25" default="en" label="reCaptcha language" description="Enter the language for reCaptcha widget in two letters format: en, es, pt, fr, de, etc" />
+		<param name="recaptchatheme" type="list" default="red" label="reCaptcha theme" description="Select the theme for reCaptcha widget">
+			<option value="0">Red</option>
+			<option value="white">White</option>
+			<option value="blackglass">Blackglass</option>
+			<option value="clean">Clean</option>                                  
+		</param>
+		<param name="ssl_server" type="list" default="1" label="Use SSL conection to reCaptcha server?" description="If you display reCaptcha in page over SSL set this param to YES">
+		    <option value="0">No</option>
+		    <option value="1">Yes</option>
+		</param>
+	        <param name="@spacer1" type="spacer" default="myCaptcha Params" label=" " description="" />
+	        <param name="font" type="text" default="texb.ttf" label="myCaptcha font" description="Enter the font file you want to use. This file should be in components/com_comprofiler/plugin/user/plug_cbrecaptcha/captcha_pi/ directory." />
+		<param name="img_width" type="text" default="100" label="myCaptcha img width" description="Enter the image's width in pixels." />
+		<param name="img_height" type="text" default="30" label="myCaptcha img heigth" description="Enter the image's heigth in pixels." />
+		<param name="bg_color" type="text" default="#fff" label="myCaptcha bg_color" description="Enter the color of the image's background in hexadecimal format." />
+		<param name="border_color" type="text" default="#996666" label="myCaptcha border color" description="Enter the color of the image's border in hexadecimal format." />
+		<param name="text_color" type="text" default="#6f6f6f" label="myCaptcha font_color" description="Enter the color of the image's font in hexadecimal format." />
+		<param name="grid_color" type="text" default="#ffb6b6" label="myCaptcha grid_color" description="Enter the color of the image's grid in hexadecimal format." />
+		<param name="shadow_color" type="text" default="#fff0f0" label="myCaptcha shadow_color" description="Enter the color of the image's shadow in hexadecimal format." />
+	</params>
+    <tabs>
+    	<tab name="CB reCaptcha" description="" class="getcbrecaptchaTab" fields="0">
+			<params>
+			</params>
+			<fields>
+			</fields>
+		</tab>
+    </tabs>   
+   <install>
+      <queries>
+       <query>
+       CREATE TABLE IF NOT EXISTS `#__cb_mycaptcha` (`captcha_id` bigint(13) NOT NULL auto_increment,
+  			`captcha_time` int(10) NOT NULL default '0',
+  			`ip_address` varchar(16) NOT NULL default '0',
+  			`word` varchar(20) NOT NULL,
+ 	 	         PRIMARY KEY  (`captcha_id`)
+			 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+       </query>
+     </queries>
+    </install>
+    <uninstall>
+      <queries>
+       <query>
+       DROP TABLE IF EXISTS `#__cb_mycaptcha`;
+       </query>
+     </queries>
+    </uninstall>       
+</cbinstall>
