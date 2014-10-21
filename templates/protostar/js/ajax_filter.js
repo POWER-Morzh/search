@@ -32,6 +32,7 @@ function searchSuggest() {
 function PutInCity(value, str) {
   document.getElementById("city_hidden").value = value;
   document.getElementById("city_suggest").style.display = "none";
+  document.getElementById("filter_keywords").value = '';
   document.getElementById("filter_keywords").style.display = "none";
   document.getElementById("city_chosen").innerHTML = '<a onclick="ResetCityFilter()">' + str + "</a>";
 }
