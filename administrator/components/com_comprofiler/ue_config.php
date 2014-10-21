@@ -1,5 +1,5 @@
 <?php
-$ueConfig['name_style']='2';
+$ueConfig['name_style']='1';
 $ueConfig['name_format']='3';
 $ueConfig['date_format']='m/d/Y';
 $ueConfig['calendar_type']='2';

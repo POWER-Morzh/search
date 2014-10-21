@@ -151,7 +151,7 @@ $uri = &JFactory::getURI();
 		<tr>
 			<td nowrap="nowrap" valign="top">
 				<label>
-					<?php echo $fieldLabelSearcable[$i]; ?>:
+					<?php echo JText::_($fieldLabelSearcable[$i]); ?>:
 				</label>
 			</td>
 			<td nowrap="nowrap">

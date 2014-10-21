@@ -553,7 +553,7 @@ class modCbadvsearchModelCbadvsearchSearch
 						}
 					if (strpos($checkbox, "<input type='checkbox' value='".$field_v."' name='".$field_name."[]' ")==false && strpos($checkbox, '<input type="checkbox" value="'.$field_v.'" name="'.$field_name.'[]"')==false)
 							$checkbox .= strpos(" ".$field_v, "'") ? '<input type="checkbox" value="'.$field_v.'" name="'.$field_name.'[]" '.$checked.' />&nbsp;'.$field_v.'&nbsp;&nbsp;' 
-								: "<input type='checkbox' value='".$field_v."' name='".$field_name."[]' ".$checked." />&nbsp;".$field_v."&nbsp;&nbsp;";
+								: "<input type='checkbox' value='".$field_v."' name='".$field_name."[]' ".$checked." />&nbsp;".JText::_($field_v)."&nbsp;&nbsp;";
 				}	
 				$searchFields[] = $checkbox;
 			}

@@ -237,9 +237,6 @@ DEFINE('_UE_NO_DATA','Nicht Angegeben!');
 DEFINE('_UE_CLICKTOVIEW','Anklicken');
 DEFINE('_UE_CLICKTOSORTBY','Anklicken, um nach %s zu sortieren');		// %s mit den Sortierungskriterien ersetzen
 DEFINE('_UE_UL_USERNAME_NAME','Benutzername(Name)');
-//CB
-DEFINE('_UE_INSTRUMENT','Instrument');
-DEFINE('_UE_SOME_INSTRUMENT','Some DE');
 
 //mod_userextraslogin
 DEFINE('_UE_NO_ACCOUNT','Noch kein Benutzerkonto?');
@@ -1179,6 +1176,32 @@ DEFINE('_UE_LOST_PASSWORD_EMAIL_ONLY_DESC','Wenn <strong>das Passwort verloren w
 // 1.4 Stable:
 DEFINE('_UE_ENABLESPOOFCHECK','Anti-spoofing Sessions Überprüfung aktivieren');
 DEFINE('_UE_ENABLESPOOFCHECK_DESC','Hier auswählen, ob gefälschte Absender-IP-Adressen in Sessions geprüft werden sollen (Dringend empfohlen, wenn Problem mit abgelaufenen Sessions und Cookie Fehlern auftauchen.) Ist standardmäßig deaktiviert, um die Performance und Stabilität zu erhöhen.');
+
+//CB
+DEFINE('_UE_INSTRUMENT','Instrument');
+DEFINE('_UE_INSTRUMENT01','Violine');
+DEFINE('_UE_INSTRUMENT02','Viola');
+DEFINE('_UE_INSTRUMENT03','Cello');
+DEFINE('_UE_INSTRUMENT04','Kontrabeß');
+DEFINE('_UE_INSTRUMENT05','Harfe');
+DEFINE('_UE_INSTRUMENT06','Klavier');
+DEFINE('_UE_INSTRUMENT07','Flügel');
+DEFINE('_UE_GENRE','Genre');
+DEFINE('_UE_ORCHESTERMUSIKER','Orchestermusiker');
+DEFINE('_UE_KAMMERMUSIKER','Kammermusiker');
+DEFINE('_UE_SOLIST','Solist');
+DEFINE('_UE_QUALIFICATION','Qualifikation');
+DEFINE('_UE_SOLISTENDIPLOM','Solistendiplom');
+DEFINE('_UE_PREISTAEGER','Presiträger');
+DEFINE('_UE_MUSIKHOCHSCHULABSCHLUSS','Musikhochschulabschluss');
+DEFINE('_UE_INSTRUMENTALGRUPPE','Instrumentalgruppe');
+DEFINE('_UE_STREICHER','Streicher');
+DEFINE('_UE_STREICHERMITKLAVIER','Streicher mit Klavier');
+DEFINE('_UE_BLAESER','Bläser');
+DEFINE('_UE_BLAESERGEMISCHT','Bläser gemischt');
+DEFINE('_UE_SONSTIGES','Sonstiges');
+DEFINE('_UE_PREISTRAIGERENSEMLE','Preistäger');
+
 
 // IMPORTANT WARNING: The closing tag, "?" and ">" has been intentionally omitted - CB works fine without it.
 // This was done to avoid errors caused by custom strings being added after the closing tag. ]
