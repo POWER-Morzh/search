@@ -237,6 +237,9 @@ DEFINE('_UE_NO_DATA','Nicht Angegeben!');
 DEFINE('_UE_CLICKTOVIEW','Anklicken');
 DEFINE('_UE_CLICKTOSORTBY','Anklicken, um nach %s zu sortieren');		// %s mit den Sortierungskriterien ersetzen
 DEFINE('_UE_UL_USERNAME_NAME','Benutzername(Name)');
+//CB
+DEFINE('_UE_INSTRUMENT','Instrument');
+DEFINE('_UE_SOME_INSTRUMENT','Some DE');
 
 //mod_userextraslogin
 DEFINE('_UE_NO_ACCOUNT','Noch kein Benutzerkonto?');

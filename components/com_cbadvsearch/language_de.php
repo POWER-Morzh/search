@@ -132,5 +132,4 @@ $language_cbadvsearch = array(
 	"saturday" => "Saturday",
 	"sunday" => "Sunday"
 );
-DEFINE('_UE_SOME_INSTRUMENT','Some');
 ?>
