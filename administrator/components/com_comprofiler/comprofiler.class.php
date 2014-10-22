@@ -3830,6 +3830,7 @@ class cbTabs extends cbTabHandler {
 				switch ( $reason ) {
 					case 'profile':
 						$where[]	=	'f.profile != 0';
+						$where[]	=	'f.profile' . $user->cb_usercbtype . ' = 1';
 						break;
 					case 'list':
 						$where[]	=	"( f.profile != 0 OR f.name = 'username'" . ( in_array( $ueConfig['name_format'], array( 1, 2, 4 ) ) ? " OR f.name = 'name'" : '' ) . ')';
