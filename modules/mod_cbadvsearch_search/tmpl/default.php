@@ -227,23 +227,6 @@ $uri = &JFactory::getURI();
 			</td>
 		</tr>
 		<tr>
-			<td>
-				<div class="city-filter-box">
-					<dt><label for="user_cb_citynumber">City:</label></dt>
-					<fieldset>
-						<div id="city_chosen" style="float: left;"></div>
-						<div class="inside-city-filter-box">
-							<input class="inputbox search tiny" type="text" name="filter_keywords" id="filter_keywords" onkeyup="searchSuggest();" autocomplete="off" size="45" maxlength="60" tabindex="3" value="" />
-							<input id="city_hidden" type="hidden" name="cb_citynumber" value="">
-						</div>
-					</fieldset>
-				       
-					<div id="city_suggest">
-					</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
 			<td width="100%" nowrap="nowrap" colspan="2">
 				<button name="Search" onclick="javascript: document.forms['searchFormModule'].submit();" class="button"><?php echo JText::_($configuration->search);?></button>
 			</td>

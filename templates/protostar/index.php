@@ -38,7 +38,6 @@ else
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
 $doc->addScript('templates/' . $this->template . '/js/template.js');
-$doc->addScript('templates/' . $this->template . '/js/ajax_filter.js');
 
 // Add Stylesheets
 $doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
