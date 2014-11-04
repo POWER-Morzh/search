@@ -494,7 +494,7 @@ class modCbadvsearchModelCbadvsearchSearch
 							if ($p == $field_v)
 								{
 									$select .= strpos(" ".$field_v, "'") ? '<option value="'.$field_v.'" selected>'.$field_v.'</option>' 
-										: "<option value='".$field_v."' selected>".$field_v."</option>";
+										: "<option value='".$field_v."' selected>".JText::_($field_v)."</option>";
 									$selected = true;
 								}
 						}
