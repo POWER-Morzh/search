@@ -141,45 +141,45 @@ $uri = &JFactory::getURI();
 		<input type="hidden" name="searchword_mod" id="search_searchword" value="" />
 		
 	<?php }	else	{  ?>
-		<tr>	<td nowrap="nowrap">	<label>
+		<tr><td>	<div nowrap="nowrap">	<label>
 					<?php echo JText::_($configuration->search_keyword); ?>:
-				</label>	</td>	<td nowrap="nowrap">
+				</label>	</div>	<div nowrap="nowrap">
 					<input type="text" name="searchword_mod" id="search_searchword" size="30" maxlength="20" value="<?php echo $searchword; ?>" class="inputbox" />
-				</td>		<td nowrap="nowrap"></td>	</tr>
+				</div>		<div nowrap="nowrap"></div>	</td></tr>
 		<?php	}	for ($i=0, $n=count($searchFields); $i < $n; $i++)	{	?>
 		
-		<tr>
-			<td nowrap="nowrap" valign="top">
+		<tr><td>
+			<div nowrap="nowrap" valign="top">
 				<label>
 					<?php echo JText::_($fieldLabelSearcable[$i]); ?>:
 				</label>
-			</td>
-			<td nowrap="nowrap">
+			</div>
+			<div nowrap="nowrap">
 				<?php echo $searchFields[$i]; ?>
-			</td>
-			<td nowrap="nowrap" valign="top">
+			</div>
+			<div nowrap="nowrap" valign="top">
 				<label>
 					<?php echo $fileDescriptionSearcable[$i]; ?>
 				</label>
-			</td>
-		</tr>	
+			</div>
+		</td></tr>	
 		<?php	}
 			if ($listing==0 && $empty_fields==1 && empty($search_by_fields_or_cblists))
 			{	/* vertical listing and if the select is allowed from the backend */	?>
-		<tr>
-			<td nowrap="nowrap">
+		<tr><td>
+			<div nowrap="nowrap">
 				<label>
 					<?php echo JText::_($configuration->list_the_empty_fields); ?>
 				</label>
-			</td>
-			<td nowrap="nowrap">
+			</div>
+			<div nowrap="nowrap">
 				<select name="list-hidden" id="list-hidden">
 					<option value='yes' <?php echo $list_hidden=="yes" ? "selected" : "" ?>><?php echo $configuration->yes; ?></option>
 					<option value='no' <?php echo $list_hidden=="no" ? "selected" : "" ?>><?php echo $configuration->no; ?></option>
 				</select>
-			</td>
-			<td nowrap="nowrap"></td>
-		</tr>
+			</div>
+			<div nowrap="nowrap"></div>
+		</td></tr>
 		<?php	}
 		$m=count($arrField_name);
 		if ($show_order_by==0) {
@@ -198,13 +198,13 @@ $uri = &JFactory::getURI();
 <input type="hidden" name="order_field" id="order_field" value="<?php echo $order_field; ?>" />
 <input type="hidden" name="order_asc" id="order_asc" value="<?php echo $order_asc; ?>" />
 		<?php	} else	{	?>
-		<tr>
-			<td nowrap="nowrap">
+		<tr><td>
+			<div nowrap="nowrap">
 				<label>
 					<?php echo JText::_($configuration->order_by); ?>
 				</label>
-			</td>
-			<td nowrap="nowrap">
+			</div>
+			<div nowrap="nowrap">
 				<select name="order_field" id="order_field">
 					<option value='rand()' <?php echo strpos(" ".$order_by, "rand()")>0 ? "selected" : "" ?>><?php echo $configuration->random; ?></option>
 				<?php 
@@ -214,14 +214,14 @@ $uri = &JFactory::getURI();
 							<option value='<?php echo $arrField_name[$j]; ?>' <?php echo strpos(" ".$order_by, $arrField_name[$j])>0 ? "selected" : "" ?>><?php echo $fieldLabels[$j]; ?></option>
 				<?php	}	?>
 				</select>
-			</td>
-			<td nowrap="nowrap">
+			</div>
+			<div nowrap="nowrap">
 				<select name="order_asc" id="order_asc">
 					<option value='asc' <?php echo strpos($order_by, "asc")>0 ? "selected" : "" ?>><?php echo $configuration->ascendent; ?></option>
 					<option value='desc' <?php echo strpos($order_by, "desc")>0 ? "selected" : "" ?>><?php echo $configuration->descendent; ?></option>
 				</select>
-			</td>
-		</tr><?php }	?>
+			</div>
+		</td></tr><?php }	?>
 	</table>
 			<!-- the end of the search form -->
 			</td>
