@@ -472,7 +472,8 @@ class modCbadvsearchModelCbadvsearchResults
 			$field_id = $fields[$i]->field_id;
 			$arrField_name[] = $field_name = $fields[$i]->field_name;
 			$appears_results[] = $fields[$i]->appears_results;
-			$fieldLabel[] = $field_label = $fields[$i]->label;
+			$field_label = $fields[$i]->label;
+			$fieldLabel[] = JText::_($fields[$i]->label);
 			$field_type = $fields[$i]->field_type;
 			$fileDescription[] = $field_description = $fields[$i]->description;
 			

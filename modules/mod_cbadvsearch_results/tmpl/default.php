@@ -232,50 +232,9 @@ function ignore_selected_users_module()
 			$n=count($searchResult);
 			echo "<div>".$configuration->search_results.": <b>".$n."</b> / ".$searchTotalResult." ".$configuration->results_found."!</div><div><hr size='1' /></div>";
 			echo $searchPagination1;	if ($n>0 && !empty($CBuser->id))	{	?>
-	<table>
-		<tr>
-			<td width="150px" nowrap="nowrap">
-				<button name="Search" onclick="javascript: save_selected_users_module();" class="button"><?php echo JText::_($configuration->save_the_selected_results);?></button>
-			</td>
-			<td width="150px" nowrap="nowrap">
-				<button name="Search" onclick="javascript: ignore_selected_users_module();" class="button"><?php echo JText::_($configuration->ignore_the_selected_results);?></button>
-			</td>
-			<td width="150px" nowrap="nowrap">
-				<input type="checkbox" name="checkentirelist" id="checkentirelist" value="yes"
-                    onClick="javascript: if (document.searchFormCBAdvSearchModule2.checkentirelist.checked==false)
-							{	//	document.searchFormCBAdvSearchModule2.checkentirelist.checked = true;
-						for (i=0; i<document.searchFormCBAdvSearchModule2.cbuserlistaModule.length; i++) document.searchFormCBAdvSearchModule2.cbuserlistaModule[i].checked = false;	}
-							else	{
-					//	document.searchFormCBAdvSearchModule2.checkentirelist.checked = false;
-						for (i=0; i<document.searchFormCBAdvSearchModule2.cbuserlistaModule.length; i++) document.searchFormCBAdvSearchModule2.cbuserlistaModule[i].checked = true;	}">
-					<b><?php echo JText::_($configuration->check_all);?></b>
-			</td>
-		</tr>
-		<?php	}
-		if (!empty($CBuser->id)) { ?>
-		<tr>
-			<td nowrap="nowrap">
-				<label>
-					<?php echo JText::_($configuration->enter_the_name_of_the_search); ?>: 
-				</label>
-			</td>
-		</tr>
-		<tr>
-			<td nowrap="nowrap">
-				<input type="text" name="name_of_the_search" id="name_of_the_search2" value="<?php echo $name_of_the_search; ?>" />
-			</td>
-		</tr><?php	if ($save_ignore_users_action_result>0)
-			{	?>
-		<tr>
-			<td nowrap="nowrap">
-				<label style="font-weight: bold;">
-					<?php if ($save_ignore_users_action_result==1) echo JText::_($configuration->operation_not_successful);
-						elseif ($save_ignore_users_action_result==2) echo JText::_($configuration->operation_successful);	?>
-				</label>
-			</td>
-		</tr>
-		<?php	}	}	?>
-			</table><input type="checkbox" name="cbuserlistaModule" id="cbuserlistaModule" value="0" style="display: none;">
+
+		<?php	} ?>
+
 <?php	$m=count($arrField_name);
 		if ($listing==0)	{	/* vertical listing */
 			for ($i=0; $i < $n; $i++)
@@ -284,7 +243,7 @@ function ignore_selected_users_module()
 				$uId = $searchResult[$i]->user_id;
 				$avatar = $searchResult[$i]->avatar;
 			//	$address = $searchResult[$i]->address;	$city = $searchResult[$i]->city;	$state = $searchResult[$i]->state;	$country = $searchResult[$i]->country;
-				echo '<INPUT TYPE="checkbox" NAME="cbuserlistaModule" id="cbuserlistaModule" value="'.$uId.'" onClick="">&nbsp;&nbsp;';
+// 				echo '<INPUT TYPE="checkbox" NAME="cbuserlistaModule" id="cbuserlistaModule" value="'.$uId.'" onClick="">&nbsp;&nbsp;';
 			if ($avatar != "" && $show_avatar==1)	{	?>
 				<div style="margin:10px 0px; clear: left;"><a href='index.php?option=com_comprofiler&task=userProfile&user=<?php echo $uId; ?>'><img src="<?php echo JURI::root().'images/comprofiler/'.$avatar; ?>" width="100px;"/></a></div>
 				<?php	}

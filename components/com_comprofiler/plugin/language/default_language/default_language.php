@@ -235,9 +235,6 @@ DEFINE('_UE_NO_DATA','Not Supplied');
 DEFINE('_UE_CLICKTOVIEW','Click for');
 DEFINE('_UE_CLICKTOSORTBY','Click to sort by %s');		// %s replaced by sorting name
 DEFINE('_UE_UL_USERNAME_NAME','Username(Name)');
-//CB
-DEFINE('_UE_INSTRUMENT','Instrument');
-DEFINE('_UE_SOME_INSTRUMENT','Some EN');
 
 //mod_userextraslogin
 DEFINE('_UE_NO_ACCOUNT','No account yet?');
@@ -1171,6 +1168,35 @@ DEFINE('_UE_LOST_PASSWORD_EMAIL_ONLY_DESC','If you <strong>lost your password</s
 // 1.4 Stable:
 DEFINE('_UE_ENABLESPOOFCHECK','Enable anti-spoofing sessions checks');
 DEFINE('_UE_ENABLESPOOFCHECK_DESC','Choose if you want spoof checking enabled on sessions (highly recommended unless you have difficulty with session expired and cookie errors when enabled). Disabled by default for best stability and usability.');
+
+// CB arbitrary fields
+DEFINE('_UE_INSTRUMENT','Instrument');
+DEFINE('_UE_INSTRUMENT01','Violin');
+DEFINE('_UE_INSTRUMENT02','Viola');
+DEFINE('_UE_INSTRUMENT03','Cello');
+DEFINE('_UE_INSTRUMENT04','Double bass');
+DEFINE('_UE_INSTRUMENT05','Harp');
+DEFINE('_UE_INSTRUMENT06','Piano');
+DEFINE('_UE_INSTRUMENT07','Grand piano');
+DEFINE('_UE_GENRE','Genre');
+DEFINE('_UE_ORCHESTERMUSIKER','Orchestra musician');
+DEFINE('_UE_KAMMERMUSIKER','Kammermusiker');
+DEFINE('_UE_SOLIST','Soloist');
+DEFINE('_UE_QUALIFICATION','Qualification');
+DEFINE('_UE_SOLISTENDIPLOM','Soloist diploma');
+DEFINE('_UE_PREISTAEGER','Award winners');
+DEFINE('_UE_MUSIKHOCHSCHULABSCHLUSS','Musikhochschulabschluss');
+DEFINE('_UE_INSTRUMENTALGRUPPE','Instrumental group');
+DEFINE('_UE_STREICHER','Streicher');
+DEFINE('_UE_STREICHERMITKLAVIER','Streicher mit Klavier');
+DEFINE('_UE_BLAESER','Bläser');
+DEFINE('_UE_BLAESERGEMISCHT','Bläser gemischt');
+DEFINE('_UE_SONSTIGES','Other');
+DEFINE('_UE_PREISTRAIGERENSEMLE','Award winners');
+DEFINE('_UE_COUNTRYNAME','Country');
+DEFINE('_UE_CITYNAME','City');
+DEFINE('_UE_PLAYEXPERIENCE','Play experience');
+
 
 // IMPORTANT WARNING: The closing tag, "?" and ">" has been intentionally omitted - CB works fine without it.
 // This was done to avoid errors caused by custom strings being added after the closing tag. ]

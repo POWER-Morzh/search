@@ -1177,12 +1177,12 @@ DEFINE('_UE_LOST_PASSWORD_EMAIL_ONLY_DESC','Wenn <strong>das Passwort verloren w
 DEFINE('_UE_ENABLESPOOFCHECK','Anti-spoofing Sessions Überprüfung aktivieren');
 DEFINE('_UE_ENABLESPOOFCHECK_DESC','Hier auswählen, ob gefälschte Absender-IP-Adressen in Sessions geprüft werden sollen (Dringend empfohlen, wenn Problem mit abgelaufenen Sessions und Cookie Fehlern auftauchen.) Ist standardmäßig deaktiviert, um die Performance und Stabilität zu erhöhen.');
 
-//CB
+// CB arbitrary fields
 DEFINE('_UE_INSTRUMENT','Instrument');
 DEFINE('_UE_INSTRUMENT01','Violine');
 DEFINE('_UE_INSTRUMENT02','Viola');
 DEFINE('_UE_INSTRUMENT03','Cello');
-DEFINE('_UE_INSTRUMENT04','Kontrabeß');
+DEFINE('_UE_INSTRUMENT04','Kontrabaß');
 DEFINE('_UE_INSTRUMENT05','Harfe');
 DEFINE('_UE_INSTRUMENT06','Klavier');
 DEFINE('_UE_INSTRUMENT07','Flügel');
@@ -1192,7 +1192,7 @@ DEFINE('_UE_KAMMERMUSIKER','Kammermusiker');
 DEFINE('_UE_SOLIST','Solist');
 DEFINE('_UE_QUALIFICATION','Qualifikation');
 DEFINE('_UE_SOLISTENDIPLOM','Solistendiplom');
-DEFINE('_UE_PREISTAEGER','Presiträger');
+DEFINE('_UE_PREISTAEGER','Preisträger');
 DEFINE('_UE_MUSIKHOCHSCHULABSCHLUSS','Musikhochschulabschluss');
 DEFINE('_UE_INSTRUMENTALGRUPPE','Instrumentalgruppe');
 DEFINE('_UE_STREICHER','Streicher');
@@ -1201,6 +1201,9 @@ DEFINE('_UE_BLAESER','Bläser');
 DEFINE('_UE_BLAESERGEMISCHT','Bläser gemischt');
 DEFINE('_UE_SONSTIGES','Sonstiges');
 DEFINE('_UE_PREISTRAIGERENSEMLE','Preistäger');
+DEFINE('_UE_COUNTRYNAME','Land');
+DEFINE('_UE_CITYNAME','Stadt');
+DEFINE('_UE_PLAYEXPERIENCE','Spiel Erfahrung');
 
 
 // IMPORTANT WARNING: The closing tag, "?" and ">" has been intentionally omitted - CB works fine without it.

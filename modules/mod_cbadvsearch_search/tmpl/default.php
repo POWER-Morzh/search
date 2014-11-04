@@ -231,26 +231,13 @@ $uri = &JFactory::getURI();
 				<button name="Search" onclick="javascript: document.forms['searchFormModule'].submit();" class="button"><?php echo JText::_($configuration->search);?></button>
 			</td>
 		</tr>
-		<?php	if (!empty($CBuser->id)) {
-			 if (empty($search_by_fields_or_cblists)) { ?>
-		<tr style="border-top: 1px solid #000000; border-bottom: 1px solid #000000;">
-			<td nowrap="nowrap">
-				<INPUT TYPE="CHECKBOX" NAME="save_the_search" id="save_the_search" onClick="" value="1" <?php echo empty($save_the_search) ? "" : "checked"; ?>>
-				&nbsp;&nbsp;<label>
-					<?php echo JText::_($configuration->save_the_search_form); ?>
-				</label>
-			</td>
-		</tr><?php }	?>
+		<?php	if (!empty($CBuser->id)) { ?>
 		<tr>
 			<td nowrap="nowrap">
-				<label>
-					<?php echo JText::_($configuration->enter_the_name_of_the_search); ?>: 
-				</label>
 			</td>
 		</tr>
 		<tr>
 			<td nowrap="nowrap">
-				<input type="text" name="name_of_the_search" id="name_of_the_search" value="<?php echo $name_of_the_search; ?>" />
 			</td>
 		</tr><?php	if ($save_ignore_users_action_result>0)
 			{	?>
