@@ -100,8 +100,8 @@ div.cbSideSetting { text-align: right; margin: 6px 2%; }
 				margin: 0px 0px 10px 0px;	border-width: 0px;	padding: 0px;	}
 .cbPosTop	 {	vertical-align: bottom;	}
 .cbPosLeft, .cbPosGrid   {	float:	left;	text-align:	left;	}
-.cbPosMiddle {	float:	left;	text-align:	center;	}
-.cbPosRight  {	float:	right;	text-align:	right;	}
+.cbPosMiddle {	text-align:	center;	}
+.cbPosRight  {	text-align:	right;	}
 .cbPosGridE	 {	margin: 0px;	border-width: 0px;	padding: 2px;	float: none;	width:auto;	}
 .cbClr		 {	clear:	both;	}
 /*
@@ -116,10 +116,10 @@ div.cbSideSetting { text-align: right; margin: 6px 2%; }
 .cbformdiv								, form.cb_form							, .cb_tab_content								{	width: 100%;	margin: 0px;	padding: 0px;	border-width: 0px;	}
 .cbformdiv .cb_form_instructions		, form.cb_form .cb_form_instructions		, .cb_tab_content .cb_form_instructions			{	width: 98%;	text-align: left;	clear: both;	padding:8px 3px 8px 6px;	}
 .cbformdiv .cb_form_line				, form.cb_form .cb_form_line				, .cb_tab_content .cb_form_line					{	width: 98%;	text-align: left;	clear: both;	padding:3px 3px 4px 6px;	}
-.cbformdiv .cb_form_line label			, form.cb_form .cb_form_line label		, .cb_tab_content .cb_form_line label			{	display: block;	float: left;	width: 28%;		font-weight:bold;	vertical-align: top;	}
+.cbformdiv .cb_form_line label			, form.cb_form .cb_form_line label		, .cb_tab_content .cb_form_line label			{	display: block;	width: 100%;		font-weight:bold;	vertical-align: top;	}
 .cbformdiv .cb_form_line div label		, form.cb_form .cb_form_line div label	, .cb_tab_content .cb_form_line div label		{	display: inline;float: none;	width: auto;	font-weight:normal;	}
 .cbformdiv .cbtwolinesfield label		, form.cb_form .cbtwolinesfield label		, .cb_tab_content .cbtwolinesfield label		{	display: block;	float: none;	width: 100%;		font-weight:bold;	vertical-align: top;	}
-.cbformdiv .cb_form_line .cb_field		, form.cb_form .cb_form_line .cb_field	, .cb_tab_content .cb_form_line .cb_field		{	display: block;	float: left;	width: 70%;		font-weight:normal;	vertical-align: top;	}
+.cbformdiv .cb_form_line .cb_field		, form.cb_form .cb_form_line .cb_field	, .cb_tab_content .cb_form_line .cb_field		{	display: block;	float: left;		font-weight:normal;	vertical-align: top;	}
 .cbformdiv .cbtwolinesfield .cb_field	, form.cb_form .cbtwolinesfield .cb_field	, .cb_tab_content .cbtwolinesfield .cb_field	{	display: block;	float: none;	width: 100%;		font-weight:normal;	vertical-align: top;	}
 .cbformdiv .cb_form_buttons_line		, form.cb_form .cb_form_buttons_line	, .cb_tab_content .cb_form_buttons_line				{	width: 100%;	text-align: center;		padding-top: 8px;	padding-bottom: 12px;	}
 .cbformdiv .cb_form_line .cb_field input, form.cb_form .cb_form_line .cb_field input, form.cb_form .cb_form_line .cb_field select		, .cb_tab_content .cb_form_line .cb_field input, .cb_tab_content .cb_form_line .cb_field select {
@@ -807,3 +807,16 @@ ul.cbMenuULlist li.cbMenu_UE_VIEWUSERREPORTS a:hover {background:#dee1e3 url(ima
 
 ul.cbMenuULlist li.cbMenu_UE_STATISTICS a {background:url(images/mini-icons/cbicons.png) repeat-y 0px -5400px; display:block;}
 ul.cbMenuULlist li.cbMenu_UE_STATISTICS a:hover {background:#dee1e3 url(images/mini-icons/cbicons.png) repeat-y 0px -5500px;}
+
+@media (min-width: 768px) {
+	.cbPosMiddle {
+	    float: left;
+	    text-align: center;
+	}
+	.cbPosRight {
+	    float: right;
+	    text-align: right;
+	}
+	.cbformdiv .cb_form_line label			, form.cb_form .cb_form_line label		, .cb_tab_content .cb_form_line label			{	float: left;	width: 28%;}
+	.cbformdiv .cb_form_line .cb_field		, form.cb_form .cb_form_line .cb_field	, .cb_tab_content .cb_form_line .cb_field		{	width: 70%;}
+}

@@ -930,7 +930,7 @@ function startRegisterForm() {
 	$urlRegister			=	$_CB_framework->viewUrl( 'registers' );
 	?>
 <form action="<?php echo $urlRegister;?>" method="post" id="login-form" class="cbLoginForm" style="margin:0px;">
-<select name="user_cb_type" id="user_cb_type"  class="required inputbox" title="Profile:To distinguish Privat oder Agentur acounts.">
+<select name="user_cb_type" id="user_cb_type"  class="required inputbox select-medium" title="Profile:To distinguish Privat oder Agentur acounts.">
 	<option value="1" id="cbPrivat">Privat</option>
 	<option value="2" id="cbEnsemble">Ensemble</option>
 </select>

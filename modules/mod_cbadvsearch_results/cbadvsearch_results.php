@@ -368,7 +368,7 @@ class modCbadvsearchModelCbadvsearchResults
 	if ($total>$current_page+5) $page_list .= '<a id="relative_left_padding5" href="javascript: setPage_module(\''.$total.'\');" class="pagina" style="margin-right: auto; width: 50px;">'.$total.'</a>';
 	
 	$page_list .= '<div id="relative_left_padding5">Display #</div>
-	<select name="limit'.$number_page_list.'" id="limit'.$number_page_list.'" style="position: relative; float: left; padding: 5px;" size="1" onchange="javascript: setNumber_module(this.value);">';
+	<select class="input-small" name="limit'.$number_page_list.'" id="limit'.$number_page_list.'" style="position: relative; padding: 5px;" size="1" onchange="javascript: setNumber_module(this.value);">';
 	
 	if ($number_items==5) $page_list .= '<option value="5" selected>5</option>'; else $page_list .= '<option value="5">5</option>';
 	if ($number_items==10) $page_list .= '<option value="10" selected>10</option>'; else $page_list .= '<option value="10">10</option>';
