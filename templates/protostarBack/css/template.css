@@ -981,7 +981,6 @@ input[type="button"],
 input[type="radio"],
 input[type="checkbox"] {
 	width: auto;
-	display: block;
 }
 select,
 input[type="file"] {
@@ -1078,9 +1077,6 @@ textarea::-webkit-input-placeholder {
 }
 .input-xxlarge {
 	width: 530px;
-}
-.select-medium {
-	width: 164px;
 }
 input[class*="span"],
 select[class*="span"],

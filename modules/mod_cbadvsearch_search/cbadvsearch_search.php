@@ -474,14 +474,14 @@ class modCbadvsearchModelCbadvsearchSearch
 			if (in_array($field_type, $values))
 			{
 				$searchFields[] = strpos(" ".$field_name_post, "'") ? '<input type="text" name="'.$field_name.'" value="'.$field_name_post.'" />' 
-					: "<input type='text' name='".$field_name."' value='".$field_name_post."' />";
+					: "<input class='inputbox input-medium' type='text' name='".$field_name."' value='".$field_name_post."' />";
 			}
 			elseif ($field_type == 'select' || $field_type == 'multiselect')
 			{
 				if (!empty($_POST)) $field_name_post = JRequest::getVar($field_name, '', '', 'array');
 					else $field_name_post = explode(",", $field_name_post);
 
-				$select = $field_type == 'multiselect' ? "<select multiple name='".$field_name."[]' />" : "<select name='".$field_name."[]' />";
+				$select = $field_type == 'multiselect' ? "<select multiple class='select select-medium' name='".$field_name."[]' />" : "<select class='select select-medium' name='".$field_name."[]' />";
 				$select .= "<option value=''>".$configuration->select."</option>";
 
 				$fieldValues = $this->getFieldValues($field_id);
@@ -548,12 +548,12 @@ class modCbadvsearchModelCbadvsearchSearch
 							$checked = $p==$field_v || $addp==$field_v ? "checked" : "";
 							if ($p == $field_v || $addp==$field_v)
 								if (strpos(" ".$field_v, "'"))
-										$checkbox .= '<input type="checkbox" value="'.$field_v.'" name="'.$field_name.'[]" '.$checked.' />&nbsp;'.$field_v.'&nbsp;&nbsp;';
-									else $checkbox .= "<input type='checkbox' value='".$field_v."' name='".$field_name."[]' ".$checked." />&nbsp;".$field_v."&nbsp;&nbsp;";
+										$checkbox .= '<span class="cbSnglCtrlLbl"><input type="checkbox" value="'.$field_v.'" name="'.$field_name.'[]" '.$checked.' />&nbsp;'.JText::_($field_v).'&nbsp;&nbsp;</span>';
+									else $checkbox .= "<span class='cbSnglCtrlLbl'><input type='checkbox' value='".$field_v."' name='".$field_name."[]' ".$checked." />&nbsp;".JText::_($field_v)."&nbsp;&nbsp;</span>";
 						}
 					if (strpos($checkbox, "<input type='checkbox' value='".$field_v."' name='".$field_name."[]' ")==false && strpos($checkbox, '<input type="checkbox" value="'.$field_v.'" name="'.$field_name.'[]"')==false)
-							$checkbox .= strpos(" ".$field_v, "'") ? '<input type="checkbox" value="'.$field_v.'" name="'.$field_name.'[]" '.$checked.' />&nbsp;'.$field_v.'&nbsp;&nbsp;' 
-								: "<input type='checkbox' value='".$field_v."' name='".$field_name."[]' ".$checked." />&nbsp;".JText::_($field_v)."&nbsp;&nbsp;";
+							$checkbox .= strpos(" ".$field_v, "'") ? '<span class="cbSnglCtrlLbl"><input type="checkbox" value="'.$field_v.'" name="'.$field_name.'[]" '.$checked.' />&nbsp;'.JText::_($field_v).'&nbsp;&nbsp;</span>' 
+								: "<span class='cbSnglCtrlLbl'><input type='checkbox' value='".$field_v."' name='".$field_name."[]' ".$checked." />&nbsp;".JText::_($field_v)."&nbsp;&nbsp;</span>";
 				}	
 				$searchFields[] = $checkbox;
 			}
