@@ -1196,6 +1196,31 @@ DEFINE('_UE_PREISTRAIGERENSEMLE','Award winners');
 DEFINE('_UE_COUNTRYNAME','Country');
 DEFINE('_UE_CITYNAME','City');
 DEFINE('_UE_PLAYEXPERIENCE','Play experience');
+DEFINE('_UE_TRANSL_REG_APPROVAL_MSG','Greetings [NAME],
+Thank you for applying for registration with us. We have
+received your request and we will process it as soon as you
+confirm your email address by clicking on the following
+hyperlink:
+[CONFIRM]
+Once your email address is confirmed our moderators will be
+notified to continue the activation process.
+You will be notified by email of the progress of your registration process.
+[DETAILS]
+Kind Regards,
+Website Administration Team');
+DEFINE('_UE_TRANSL_REG_WELCOME_MSG','Welcome [NAME],
+Your application has been approved by our administration team.
+Your account with the following details:
+[DETAILS]
+has been activated.
+We welcome you to our online community and trust that together
+we will grow.
+Enjoy the experience!
+Kind Regards,
+Website Administration Team');
+DEFINE('_UE_TRANSL_REG_WELCOME_SUB','New User Details');
+DEFINE('_UE_TRANSL_REG_PEND_APPR_SUB','Your Registration is Pending Approval');
+DEFINE('_UE_TRANSL_REG_EMAIL_NAME','User Registration');
 
 
 // IMPORTANT WARNING: The closing tag, "?" and ">" has been intentionally omitted - CB works fine without it.

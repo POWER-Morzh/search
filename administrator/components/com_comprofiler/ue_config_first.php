@@ -20,33 +20,13 @@ $ueConfig['reg_confirmation']='1';
 $ueConfig['reg_username_checker']='0';
 $ueConfig['reg_email_checker']='0';
 $ueConfig['reg_show_login_on_page']='0';
-$ueConfig['reg_email_name']='User Registration';
+$ueConfig['reg_email_name']=_UE_TRANSL_REG_EMAIL_NAME;
 $ueConfig['reg_email_from']='';
 $ueConfig['reg_email_replyto']='';
-$ueConfig['reg_pend_appr_sub']='Your Registration is Pending Approval';
-$ueConfig['reg_pend_appr_msg']='Greetings [NAME],
-Thank you for applying for registration with us. We have
-received your request and we will process it as soon as you
-confirm your email address by clicking on the following
-hyperlink:
-[CONFIRM]
-Once your email address is confirmed our moderators will be
-notified to continue the activation process.
-You will be notified by email of the progress of your registration process.
-[DETAILS]
-Kind Regards,
-Website Administration Team';
-$ueConfig['reg_welcome_sub']='New User Details';
-$ueConfig['reg_welcome_msg']='Welcome [NAME],
-Your application has been approved by our administration team.
-Your account with the following details:
-[DETAILS]
-has been activated.
-We welcome you to our online community and trust that together
-we will grow.
-Enjoy the experience!
-Kind Regards,
-Website Administration Team';
+$ueConfig['reg_pend_appr_sub']=_UE_TRANSL_REG_PEND_APPR_SUB;
+$ueConfig['reg_pend_appr_msg']=_UE_MYAPPROVALMAIL;
+$ueConfig['reg_welcome_sub']=_UE_TRANSL_REG_WELCOME_SUB;
+$ueConfig['reg_welcome_msg']=_UE_TRANSL_REG_WELCOME_MSG;
 $ueConfig['reg_show_icons_explain']='3';
 $ueConfig['reg_intro_msg']='';
 $ueConfig['reg_conclusion_msg']='';
