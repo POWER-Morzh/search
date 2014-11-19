@@ -4987,9 +4987,9 @@ class cbNotification {
 		}
 		$rowFrom				=	new stdClass();
 		$rowFrom->email			=	$ueConfig['reg_email_from'];
-		$rowFrom->name			=	stripslashes( $ueConfig['reg_email_name'] );
+		$rowFrom->name			=	getLangDefinition(stripslashes( $ueConfig['reg_email_name'] ));
 		$rowFrom->replytoEmail	=	$ueConfig['reg_email_replyto'];
-		$rowFrom->replytoName	=	stripslashes( $ueConfig['reg_email_name'] );
+		$rowFrom->replytoName	=	getLangDefinition(stripslashes( $ueConfig['reg_email_name'] ));
 
 		if ( ! is_object( $toid ) ) {
 			$rowTo				=	CBuser::getUserDataInstance( $toid );
